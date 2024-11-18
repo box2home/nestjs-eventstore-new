@@ -27,6 +27,7 @@ export class EventStore {
     this.connection.connect();
     this.connection.on('connected', () => {
       this.logger.log('Connection to EventStore established!');
+      this.logger.log('🚀Settings🚀',this.settings);
       this.retryAttempts = 0;
       this.isConnected = true;
     });
